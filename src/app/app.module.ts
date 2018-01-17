@@ -9,13 +9,17 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MessageListComponent } from '../components/message-list/message-list';
+import { ChatComponent } from '../components/chat/chat';
+import { InsertMessageComponent } from '../components/insert-message/insert-message';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    MessageListComponent
+    MessageListComponent,
+    ChatComponent,
+    InsertMessageComponent
   ],
   imports: [
     BrowserModule,
