@@ -32,6 +32,13 @@
     },
     "devDependencies": {
         "@ionic/app-scripts": "3.1.6",
+        "@types/jasmine": "2.5.41",
+        "@types/node": "^9.3.0",
+        "connect": "^3.6.5",
+        "jasmine": "^2.8.0",
+        "jasmine-spec-reporter": "^4.2.1",
+        "protractor": "^5.2.2",
+        "ts-node": "^4.1.0",
         "typescript": "2.4.2"
     },
     "description": "An Ionic project",
