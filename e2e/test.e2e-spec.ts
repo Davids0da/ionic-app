@@ -28,18 +28,19 @@ describe('Example E2E Test', () => {
 
   });
 
-  // it('should open right slide menu', () => {
+  it('should have two elements list items in right menu', () => {
 
-  //   element(by.id('right-button')).click().then(() => {
+    element(by.id('right-button')).click().then(() => {
 
-  //     browser.driver.sleep(500);
+      browser.driver.sleep(500);
 
-  //     expect(element.all(by.repeater('p in pages')).count()).toEqual(2);
+      expect(element.all(by.css('#left-menu ion-content ion-list button')).count()).toEqual(2);
 
-  //   });
+    });
 
-  // });
+  });
 
 });
+
 
 
