@@ -1,3 +1,24 @@
-ion-textarea {
-    border: 1px solid gray;
+#insert-msg-wrapper {
+    border: 1.5px solid #184c71;
+}
+#textarea-btn-wrapper {
+    display: flex;
+}
+#btm-btn-wrapper {
+    width: 100%;
+    display: flex;
+}
+#test {
+    color: #184c71;
+    font-size: 30px;
+    background: transparent;
+    border-color: transparent;
+}
+
+#btm-btn-wrapper button {
+    color: #184c71;
+    font-size: 30px;
+    background: transparent;
+    border-color: transparent;
+    flex: 1;
 }

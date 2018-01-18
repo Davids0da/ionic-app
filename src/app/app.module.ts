@@ -19,7 +19,7 @@ import { InsertMessageComponent } from '../components/insert-message/insert-mess
     ListPage,
     MessageListComponent,
     ChatComponent,
-    InsertMessageComponent
+    InsertMessageComponent,
   ],
   imports: [
     BrowserModule,
