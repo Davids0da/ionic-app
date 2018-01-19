@@ -1,8 +1,8 @@
 <div id="chat-holder">
   <div id="message-list-holder">
-    <message-list>
+    <message-list [messages]="messages" >
     </message-list>
   </div>
-  <insert-message>
+  <insert-message (messageSent)="addMessage($event)" >
   </insert-message>
 </div>

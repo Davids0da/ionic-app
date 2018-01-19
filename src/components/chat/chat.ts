@@ -12,11 +12,16 @@ import { Component } from '@angular/core';
 })
 export class ChatComponent {
 
+  public messages: Array<string> = new Array();
   text: string;
 
   constructor() {
     console.log('Hello ChatComponent Component');
     this.text = 'Hello World';
+  }
+
+  public addMessage(message: string) {
+    this.messages.push(message);
   }
 
 }

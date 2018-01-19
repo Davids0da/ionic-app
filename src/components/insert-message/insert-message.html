@@ -1,32 +1,36 @@
 <div id="insert-msg-wrapper">
   <div id="textarea-btn-wrapper">
-    <button id="test" ion-button>
+    <div id="add-button">
       <ion-icon name="add"></ion-icon>
-    </button>
-    <ion-textarea rows="1" placeholder="type something">
-    </ion-textarea>
-    <button id="test" ion-button>
-      <ion-icon name="send"></ion-icon>
-    </button>
+    </div>
+    <div id="form-wrapper">
+      <form [formGroup]="messageCreateForm" (ngSubmit)="logForm()">
+        <ion-textarea id="text-area" formControlName="newMessage" name="message" rows="1" placeholder="type something">
+        </ion-textarea>
+        <button clear [disabled]="!messageCreateForm.valid" type="submit" id="send-button" ion-button>
+          <ion-icon name="send"></ion-icon>
+        </button>
+      </form>
+    </div>
   </div>
   <div id="btm-btn-wrapper">
-    <button ion-button>
+    <div>
       <ion-icon name="camera"></ion-icon>
-    </button>
-    <button ion-button>
+    </div>
+    <div>
       <ion-icon name="at"></ion-icon>
-    </button>
-    <button ion-button>
+    </div>
+    <div>
       <ion-icon name="add"></ion-icon>
-    </button>
-    <button ion-button>
+    </div>
+    <div>
       <ion-icon name="checkbox-outline"></ion-icon>
-    </button>
-    <button ion-button>
-      <ion-icon name="add"></ion-icon>
-    </button>
-    <button ion-button>
+    </div>
+    <div>
+      <ion-icon name="text"></ion-icon>
+    </div>
+    <div>
       <ion-icon name="notifications-outline"></ion-icon>
-    </button>
+    </div>
   </div>
 </div>

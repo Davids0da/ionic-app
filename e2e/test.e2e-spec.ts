@@ -14,7 +14,6 @@ describe('Example E2E Test', () => {
             .click()
             .then(() => {
                 browser.driver.sleep(500);
-
                 expect(element(by.id('left-menu')).getAttribute('innerHTML')).toContain('Left Menu');
             });
     });
@@ -24,7 +23,6 @@ describe('Example E2E Test', () => {
             .click()
             .then(() => {
                 browser.driver.sleep(500);
-
                 expect(element.all(by.css('#right-menu ion-content ion-list button')).count()).toEqual(2);
             });
     });
@@ -41,5 +39,14 @@ describe('Example E2E Test', () => {
                         expect(element.all(by.css('#test-list button')).count()).toEqual(10);
                     });
             });
+    });
+    it('should update input value when user types', () => {
+        let sendButton = element(by.id('send-button'));
+        let nativeTextarea = element(by.css('#text-area textarea'));
+        nativeTextarea.sendKeys('Komed health').then(() => {
+            sendButton.click();
+            browser.driver.sleep(1000);
+            expect(element(by.css('#list-holder ion-card ion-card-content')).getAttribute('innerHTML')).toContain('Komed health');
+        });
     });
 });

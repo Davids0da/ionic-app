@@ -1,22 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-/**
- * Generated class for the InsertMessageComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
-  selector: 'insert-message',
-  templateUrl: 'insert-message.html'
+    selector: 'insert-message',
+    templateUrl: 'insert-message.html'
 })
 export class InsertMessageComponent {
+    public messageCreateForm: FormGroup;
 
-  text: string;
+    @Output() messageSent: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() {
-    console.log('Hello InsertMessageComponent Component');
-    this.text = 'Hello World';
-  }
+    constructor(private formBuilder: FormBuilder) {
+        this.messageCreateForm = this.formBuilder.group({
+            newMessage: ['', [Validators.required, Validators.minLength(1)]]
+        });
+    }
 
+    messages = [];
+    public logForm() {
+        this.messageSent.emit(this.messageCreateForm.value.newMessage);
+        this.messageCreateForm.reset();
+    }
 }

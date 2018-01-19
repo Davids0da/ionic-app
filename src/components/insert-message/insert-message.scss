@@ -1,23 +1,45 @@
 #insert-msg-wrapper {
     border: 1.5px solid #184c71;
 }
-#textarea-btn-wrapper {
+
+#textarea-btn-wrapper,
+#textarea-btn-wrapper form {
     display: flex;
+    justify-content: space-between;
 }
+
+#textarea-btn-wrapper {
+    width: 100%;
+}
+
 #btm-btn-wrapper {
     width: 100%;
     display: flex;
+    margin: 10px 0 10px 0;
 }
-#test {
+#send-button,
+#add-button {
     color: #184c71;
     font-size: 30px;
     background: transparent;
-    border-color: transparent;
+}
+#add-button {
+    padding: 3px 20px;
+}
+#send-button {
+    font-size: 27px;
+}
+// #text-area,
+#form-wrapper {
+    position: absolute;
+    left: 70px;
+    right: 0px;
 }
 
-#btm-btn-wrapper button {
+#btm-btn-wrapper div {
     color: #184c71;
-    font-size: 30px;
+    font-size: 20px;
+    text-align: center;
     background: transparent;
     border-color: transparent;
     flex: 1;
