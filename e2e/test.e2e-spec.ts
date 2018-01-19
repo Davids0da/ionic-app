@@ -40,7 +40,7 @@ describe('Example E2E Test', () => {
                     });
             });
     });
-    it('should update input value when user types', () => {
+    it('should show message in messages', () => {
         let sendButton = element(by.id('send-button'));
         let nativeTextarea = element(by.css('#text-area textarea'));
         nativeTextarea.sendKeys('Komed health').then(() => {
