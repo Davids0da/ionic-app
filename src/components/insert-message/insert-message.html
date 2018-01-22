@@ -4,7 +4,7 @@
       <ion-icon name="add"></ion-icon>
     </div>
     <div id="form-wrapper">
-      <form [formGroup]="messageCreateForm" (ngSubmit)="logForm()">
+      <form [formGroup]="messageCreateForm" (ngSubmit)="logForm()" (keyup.enter)="logForm()">
         <ion-textarea id="text-area" formControlName="newMessage" name="message" rows="1" placeholder="type something">
         </ion-textarea>
         <button clear [disabled]="!messageCreateForm.valid" type="submit" id="send-button" ion-button>

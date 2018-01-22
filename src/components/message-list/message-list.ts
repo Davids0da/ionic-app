@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
     templateUrl: 'message-list.html'
 })
 export class MessageListComponent {
-  @Input() messages: Array<string>;
+    @Input() messages: Array<string>;
+    public davidInfo: object = { ime: 'David', prezime: 'Milosavljevic' };
     constructor() {}
 }

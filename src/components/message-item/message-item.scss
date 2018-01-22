@@ -1,0 +1,26 @@
+.more-info-button {
+    font-size: 25px;
+    position: absolute;
+    margin-top: 40px;
+    animation: opacity 0.5s, positionmove 0.5s;
+    right: 40px;
+}
+@keyframes opacity {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes positionmove {
+  from { right: 10px; }
+  to   { right: 40px; }
+}
+
+.uvuceno {
+    margin-left: -50px;
+    transition: 0.5s;
+}
+.message-card {
+  transition: 0.5s;
+}
+.message-card-wrapper {
+  display: flex;
+}

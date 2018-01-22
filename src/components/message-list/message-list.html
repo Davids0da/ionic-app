@@ -1,12 +1,5 @@
 <div>
-  <div id="list-holder">
-    <ion-card *ngFor="let m of messages">
-      <ion-card-header>
-        David Soda Milosavljevic
-      </ion-card-header>
-      <ion-card-content>
-        {{ m }}
-      </ion-card-content>
-    </ion-card>
+  <div>
+    <message-item *ngFor="let message of messages; let i = index" [message]="message" [poruka]="davidInfo.ime + ' ' + davidInfo.prezime" id="message{{i}}" ></message-item>
   </div>
 </div>

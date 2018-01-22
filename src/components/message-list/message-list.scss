@@ -1,1 +1,10 @@
-
+#header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+#spec:hover {
+    cursor: pointer;
+}
+#spec {
+    padding: 0px 10px 0px 10px;
+}

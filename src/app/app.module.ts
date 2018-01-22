@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MessageListComponent } from '../components/message-list/message-list';
 import { ChatComponent } from '../components/chat/chat';
 import { InsertMessageComponent } from '../components/insert-message/insert-message';
+import { MessageItemComponent } from '../components/message-item/message-item';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { InsertMessageComponent } from '../components/insert-message/insert-mess
     MessageListComponent,
     ChatComponent,
     InsertMessageComponent,
+    MessageItemComponent
   ],
   imports: [
     BrowserModule,

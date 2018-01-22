@@ -1,0 +1,12 @@
+<div class="message-card-wrapper">
+  <ion-card class="message-card" [class.uvuceno]="uvuceno">
+    <ion-card-header id="header-wrapper">
+      <h4> {{ poruka }} </h4>
+      <ion-icon id="spec" name="more" (click)='toggleMsgItem();'></ion-icon>
+    </ion-card-header>
+    <ion-card-content id="content-wrapper">
+      {{ message }}
+    </ion-card-content>
+  </ion-card>
+  <ion-icon *ngIf="uvuceno" class="more-info-button" name="information-circle"></ion-icon>
+</div>
