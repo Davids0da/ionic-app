@@ -19,8 +19,12 @@ export class InsertMessageComponent {
         this.messageSent.emit(this.messageCreateForm.value.newMessage);
         this.messageCreateForm.reset();
     }
-    public insertText() {
-        const newMessageValue = this.messageCreateForm.value.newMessage + ' @';
+    public insertText(char: string) {
+        let lastCharacter = this.messageCreateForm.value.newMessage.slice(-1);
+        if ((lastCharacter !== ' ') && this.messageCreateForm.value.newMessage.length > 0) {
+            char = ' ' + char;
+        }
+        const newMessageValue = this.messageCreateForm.value.newMessage + char;
         this.messageCreateForm.setValue({
             newMessage: newMessageValue
         });
