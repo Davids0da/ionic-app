@@ -15,10 +15,14 @@ export class InsertMessageComponent {
             newMessage: ['', [Validators.required, Validators.minLength(1)]]
         });
     }
-
-    messages = [];
     public logForm() {
         this.messageSent.emit(this.messageCreateForm.value.newMessage);
         this.messageCreateForm.reset();
+    }
+    public insertText() {
+        const newMessageValue = this.messageCreateForm.value.newMessage + ' @';
+        this.messageCreateForm.setValue({
+            newMessage: newMessageValue
+        });
     }
 }
