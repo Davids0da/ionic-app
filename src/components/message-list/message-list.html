@@ -1,5 +1,5 @@
 <div>
   <div>
-    <message-item *ngFor="let message of messages; let i = index" [message]="message" [poruka]="davidInfo.ime + ' ' + davidInfo.prezime" id="message{{i}}" ></message-item>
+    <message-item *ngFor="let message of messages; let i = index" [index]="i" [message]="message" [user]="davidInfo.ime + ' ' + davidInfo.prezime" id="message{{i}}" ></message-item>
   </div>
 </div>

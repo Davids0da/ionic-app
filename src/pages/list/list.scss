@@ -1,4 +1,5 @@
-page-list {
+h4 {
+  color: #184c71;
 }
 #close-btn {
     color: grey;
@@ -12,4 +13,7 @@ ion-navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+#content-wrapper-2 {
+  text-align: center;
 }

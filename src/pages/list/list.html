@@ -1,27 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle start>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
+    <ion-title>Message info</ion-title>
     <button (click)="closeModal();" id="close-btn" ion-button clear>
       <ion-icon name="close"></ion-icon>
     </button>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list id="test-list">
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from
-    <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content id="content-wrapper-2">
+  <h1 ion-text>ID: {{ id }}</h1>
+  <h1 ion-text>Message: {{ message }}</h1>
 </ion-content>

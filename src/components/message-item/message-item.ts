@@ -8,15 +8,15 @@ import { ListPage } from '../../pages/list/list';
 })
 export class MessageItemComponent {
     @Input() message: string;
-    @Input() poruka: string;
+    @Input() user: string;
+    @Input() index: number;
     public uvuceno: boolean = false;
 
     constructor(public modalCtrl: ModalController) {}
 
     public list() {
-        const profileModal = this.modalCtrl.create(ListPage);
+        const profileModal = this.modalCtrl.create(ListPage, { message: this.message , id: this.index});
         profileModal.present();
-        console.log('ahah');
     }
 
     public toggleMsgItem() {
