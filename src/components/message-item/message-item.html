@@ -8,5 +8,6 @@
       {{ message }}
     </ion-card-content>
   </ion-card>
-  <ion-icon *ngIf="uvuceno" class="more-info-button" name="information-circle"></ion-icon>
+  <ion-icon *ngIf="uvuceno" (click)="list();" class="more-info-button" name="information-circle"></ion-icon>
 </div>
+

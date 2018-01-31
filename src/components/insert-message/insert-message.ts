@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { VALID } from '@angular/forms/src/model';
 
 @Component({
     selector: 'insert-message',
@@ -16,12 +17,15 @@ export class InsertMessageComponent {
         });
     }
     public logForm() {
-        this.messageSent.emit(this.messageCreateForm.value.newMessage);
-        this.messageCreateForm.reset();
+        if (this.messageCreateForm.value.newMessage.length) {
+            this.messageSent.emit(this.messageCreateForm.value.newMessage);
+            this.messageCreateForm.reset();
+        }
     }
     public insertText(char: string) {
-        let lastCharacter = this.messageCreateForm.value.newMessage.slice(-1);
-        if ((lastCharacter !== ' ') && this.messageCreateForm.value.newMessage.length > 0) {
+        const lastCharacter = this.messageCreateForm.value.newMessage.slice(-1);
+        const n = lastCharacter.match(/\n/g);
+        if (lastCharacter !== ' ' && n === null && this.messageCreateForm.value.newMessage.length > 0) {
             char = ' ' + char;
         }
         const newMessageValue = this.messageCreateForm.value.newMessage + char;
@@ -30,3 +34,5 @@ export class InsertMessageComponent {
         });
     }
 }
+
+// prevent eneter key down

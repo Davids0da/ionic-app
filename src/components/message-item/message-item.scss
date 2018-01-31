@@ -5,6 +5,9 @@
     animation: opacity 0.5s, positionmove 0.5s;
     right: 40px;
 }
+.more-info-button:hover {
+  cursor: pointer;
+}
 @keyframes opacity {
   from { opacity: 0; }
   to   { opacity: 1; }

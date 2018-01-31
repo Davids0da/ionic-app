@@ -1,3 +1,15 @@
 page-list {
-
+}
+#close-btn {
+    color: grey;
+    font-size: 23px;
+    background: transparent;
+    position: absolute;
+    right: -7px;
+    top: 5px
+}
+ion-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

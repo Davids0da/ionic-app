@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { InsertMessageComponent } from '../insert-message/insert-message';
 
 @Component({
     selector: 'chat',
     templateUrl: 'chat.html'
 })
 export class ChatComponent {
-    public messages: Array<string> = ['dksajfhaskd', 'fkjashdkjf'];
+    public messages: Array<string> = ['dksajfhaskd', 'fkjashdkjf', 'faksjdfsd'];
     text: string;
 
     constructor() {}
